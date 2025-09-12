@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Softmatrices - Empowering Businesses with Innovative IT Solutions</title>
+    <meta name="description" content="Softmatrices delivers cutting-edge technology and expert consulting to drive your business forward. Our tailored solutions ensure efficiency, security, and growth.">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'softmatrices-blue': '#2196F3',
+                        'softmatrices-dark': '#333333',
+                        'softmatrices-gray': '#F8F8F8',
+                        'softmatrices-light-gray': '#F8F9FA'
+                    },
+                    fontFamily: {
+                        'sans': ['Inter', 'system-ui', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="font-sans bg-white">
+    <!-- Header -->
+    <header class="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-sm shadow-sm z-50">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <div class="flex items-center space-x-2">
+                        <div class="w-8 h-8 bg-softmatrices-blue rounded-sm flex items-center justify-center">
+                            <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z"/>
+                            </svg>
+                        </div>
+                        <span class="text-xl font-bold text-softmatrices-dark">Softmatrices</span>
+                    </div>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="text-softmatrices-dark hover:text-softmatrices-blue transition-colors">Home</a>
+                    <a href="#about" class="text-softmatrices-dark hover:text-softmatrices-blue transition-colors">About</a>
+                    <a href="#services" class="text-softmatrices-dark hover:text-softmatrices-blue transition-colors">Services</a>
+                    <a href="#products" class="text-softmatrices-dark hover:text-softmatrices-blue transition-colors">Products</a>
+                    <a href="#contact" class="text-softmatrices-dark hover:text-softmatrices-blue transition-colors">Contact</a>
+                    <button class="bg-softmatrices-blue text-white px-6 py-2 rounded-lg hover:bg-blue-600 transition-colors">
+                        Get Started
+                    </button>
+                </div>
+                
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-softmatrices-dark hover:text-softmatrices-blue">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Mobile Navigation -->
+            <div id="mobile-menu" class="md:hidden hidden bg-white border-t">
+                <div class="px-2 pt-2 pb-3 space-y-1">
+                    <a href="#home" class="block px-3 py-2 text-softmatrices-dark hover:text-softmatrices-blue">Home</a>
+                    <a href="#about" class="block px-3 py-2 text-softmatrices-dark hover:text-softmatrices-blue">About</a>
+                    <a href="#services" class="block px-3 py-2 text-softmatrices-dark hover:text-softmatrices-blue">Services</a>
+                    <a href="#products" class="block px-3 py-2 text-softmatrices-dark hover:text-softmatrices-blue">Products</a>
+                    <a href="#contact" class="block px-3 py-2 text-softmatrices-dark hover:text-softmatrices-blue">Contact</a>
+                    <button class="w-full mt-4 bg-softmatrices-blue text-white px-6 py-2 rounded-lg hover:bg-blue-600 transition-colors">
+                        Get Started
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="page-section smooth-scroll-section relative min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-900 to-gray-800">
+        <!-- Background Image -->
+        <div class="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-40" style="background-image: url('assets/images/hero-office.jpg');"></div>
+        
+        <!-- Overlay Content -->
+        <div class="relative z-10 text-center text-white px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+                Empowering Businesses with Innovative IT Solutions
+            </h1>
+            <p class="text-lg sm:text-xl mb-8 text-gray-200 max-w-3xl mx-auto">
+                Softmatrices delivers cutting-edge technology and expert consulting to drive your business forward. Our tailored solutions ensure efficiency, security, and growth.
+            </p>
+            <button class="bg-softmatrices-blue text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-600 transition-colors shadow-lg">
+                Get Started
+            </button>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="page-section smooth-scroll-section py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-softmatrices-dark mb-6">
+                    About Softmatrices
+                </h2>
+                <p class="text-lg text-softmatrices-dark leading-relaxed max-w-4xl mx-auto">
+                    Softmatrices is an innovative IT solutions and consulting company dedicated to helping businesses thrive in the digital age. We combine deep industry expertise with cutting-edge technology to deliver tailored solutions that drive growth, efficiency, and security.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- AI/ML Solutions Card -->
+                <div class="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow text-center">
+                    <div class="w-16 h-16 bg-softmatrices-blue rounded-lg flex items-center justify-center mb-4 mx-auto">
+                        <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.94-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-softmatrices-dark mb-3">AI/ML Solutions</h3>
+                    <p class="text-softmatrices-dark">Over 50+ successful AI/ML model deployments, enhancing business intelligence and automation.</p>
+                </div>
+                
+                <!-- Efficient Coding Card -->
+                <div class="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow text-center">
+                    <div class="w-16 h-16 bg-softmatrices-blue rounded-lg flex items-center justify-center mb-4 mx-auto">
+                        <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0L19.2 12l-4.6-4.6L16 6l6 6-6 6-1.4-1.4z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-softmatrices-dark mb-3">Efficient Coding</h3>
+                    <p class="text-softmatrices-dark">Millions of lines of optimized code written, powering robust and scalable applications for our clients.</p>
+                </div>
+                
+                <!-- Cyber Security Card -->
+                <div class="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow text-center">
+                    <div class="w-16 h-16 bg-softmatrices-blue rounded-lg flex items-center justify-center mb-4 mx-auto">
+                        <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                            <path fill-rule="evenodd" d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z" clip-rule="evenodd"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-softmatrices-dark mb-3">Cyber Security</h3>
+                    <p class="text-softmatrices-dark">99.9% threat detection accuracy, safeguarding client data with state-of-the-art security protocols.</p>
+                </div>
+                
+                <!-- Continuous Innovation Card -->
+                <div class="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow text-center">
+                    <div class="w-16 h-16 bg-softmatrices-blue rounded-lg flex items-center justify-center mb-4 mx-auto">
+                        <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M9 21c0 .55.45 1 1 1h4c.55 0 1-.45 1-1v-1H9v1zm3-19C8.14 2 5 5.14 5 9c0 2.38 1.19 4.47 3 5.74V17c0 .55.45 1 1 1h6c.55 0 1-.45 1-1v-2.26c1.81-1.27 3-3.36 3-5.74 0-3.86-3.14-7-7-7zm2.85 11.1l-.85.6V16h-4v-2.3l-.85-.6C7.8 12.16 7 10.63 7 9c0-2.76 2.24-5 5-5s5 2.24 5 5c0 1.63-.8 3.16-2.15 4.1z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-softmatrices-dark mb-3">Continuous Innovation</h3>
+                    <p class="text-softmatrices-dark">Committed to R&D, we consistently integrate novel technologies to future-proof your business.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="page-section smooth-scroll-section py-20 bg-softmatrices-gray">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-softmatrices-dark mb-6">
+                    Our Services
+                </h2>
+                <p class="text-lg text-softmatrices-dark max-w-3xl mx-auto">
+                    Explore our comprehensive range of IT services designed to empower your business.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Service Card 1: Cloud Solutions -->
+                <div class="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
+                    <div class="w-16 h-16 bg-teal-600 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M19.35 10.04A7.49 7.49 0 0 0 12 4C9.11 4 6.6 5.64 5.35 8.04A5.994 5.994 0 0 0 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-softmatrices-dark mb-3">Cloud Solutions</h3>
+                    <p class="text-softmatrices-dark">Scalable and secure cloud infrastructure management.</p>
+                </div>
+                
+                <!-- Service Card 2: Application Development -->
+                <div class="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
+                    <div class="w-16 h-16 bg-teal-500 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M17 1.01L7 1c-1.1 0-1.99.9-1.99 2v18c0 1.1.89 2 2 2h10c1.1 0 2-.9 2-2V3c0-1.1-.9-1.99-2-1.99zM17 19H7V5h10v14z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-softmatrices-dark mb-3">Application Development</h3>
+                    <p class="text-softmatrices-dark">Custom application development for web and mobile.</p>
+                </div>
+                
+                <!-- Service Card 3: Security Consulting -->
+                <div class="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
+                    <div class="w-16 h-16 bg-blue-900 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                            <path fill-rule="evenodd" d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z" clip-rule="evenodd"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-softmatrices-dark mb-3">Security Consulting</h3>
+                    <p class="text-softmatrices-dark">Comprehensive security assessments and solutions.</p>
+                </div>
+                
+                <!-- Service Card 4: AI/ML Integration -->
+                <div class="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
+                    <div class="w-16 h-16 bg-teal-600 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                            <path fill-rule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clip-rule="evenodd"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-softmatrices-dark mb-3">AI/ML Integration</h3>
+                    <p class="text-softmatrices-dark">Advanced AI and machine learning integration.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="page-section smooth-scroll-section py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-softmatrices-dark mb-6">
+                    Our Innovative Products
+                </h2>
+                <p class="text-lg text-softmatrices-dark max-w-3xl mx-auto">
+                    We develop cutting-edge solutions to solve complex business challenges.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Product Card 1 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+                    <div class="h-48 bg-teal-600 flex items-center justify-center">
+                        <svg class="w-16 h-16 text-white" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                        </svg>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-softmatrices-dark mb-3">Product A</h3>
+                        <p class="text-softmatrices-dark mb-4">Description for Product A. This product offers a range of features designed to enhance productivity and streamline workflows.</p>
+                        <a href="#" class="text-softmatrices-blue font-semibold hover:underline">Learn More →</a>
+                    </div>
+                </div>
+                
+                <!-- Product Card 2 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+                    <div class="h-48 bg-orange-200 flex items-center justify-center">
+                        <svg class="w-16 h-16 text-orange-600" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/>
+                        </svg>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-softmatrices-dark mb-3">Product B</h3>
+                        <p class="text-softmatrices-dark mb-4">Description for Product B. This product focuses on data analysis and visualization, providing insights for informed decision-making.</p>
+                        <a href="#" class="text-softmatrices-blue font-semibold hover:underline">Learn More →</a>
+                    </div>
+                </div>
+                
+                <!-- Product Card 3 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+                    <div class="h-48 bg-green-200 flex items-center justify-center">
+                        <svg class="w-16 h-16 text-green-600" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M16 4c0-1.11.89-2 2-2s2 .89 2 2-.89 2-2 2-2-.89-2-2zm4 18v-6h2.5l-2.54-7.63A1.5 1.5 0 0 0 18.54 8H16c-.8 0-1.54.37-2.01.99L12 11l-1.99-2.01A2.5 2.5 0 0 0 8 8H5.46c-.8 0-1.54.37-2.01.99L.95 16.37 3.5 22H6v-6h2v6h2v-6h2v6h2v-6h2v6h2z"/>
+                        </svg>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-softmatrices-dark mb-3">Product C</h3>
+                        <p class="text-softmatrices-dark mb-4">Description for Product C. This product is a comprehensive solution for managing customer relationships and improving engagement.</p>
+                        <a href="#" class="text-softmatrices-blue font-semibold hover:underline">Learn More →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="page-section smooth-scroll-section py-20 bg-softmatrices-light-gray">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <!-- Contact Information -->
+                <div>
+                    <h2 class="text-4xl font-bold text-softmatrices-dark mb-6">Contact Us</h2>
+                    <p class="text-lg text-softmatrices-dark mb-8 leading-relaxed">
+                        We're here to help. Whether you have a question about our services, need a custom solution, or just want to learn more about how Softmatrices can transform your business, we're ready to listen. Reach out to us today, and let's start a conversation.
+                    </p>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-center space-x-3">
+                            <svg class="w-5 h-5 text-softmatrices-blue" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
+                                <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
+                            </svg>
+                            <span class="text-softmatrices-dark">contact@softmatrices.com</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <svg class="w-5 h-5 text-softmatrices-blue" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
+                            </svg>
+                            <span class="text-softmatrices-dark">+1 (234) 567-890</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Contact Form -->
+                <div class="bg-white rounded-lg shadow-lg p-8">
+                    <form id="contact-form" class="space-y-6">
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-softmatrices-dark mb-2">Name</label>
+                            <input type="text" id="name" name="name" placeholder="John Doe" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-softmatrices-blue focus:border-transparent">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-softmatrices-dark mb-2">Email</label>
+                            <input type="email" id="email" name="email" placeholder="you@example.com" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-softmatrices-blue focus:border-transparent">
+                        </div>
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-softmatrices-dark mb-2">Message</label>
+                            <textarea id="message" name="message" rows="4" placeholder="How can we help you?" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-softmatrices-blue focus:border-transparent resize-vertical"></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-softmatrices-blue text-white py-3 px-6 rounded-lg font-semibold hover:bg-blue-600 transition-colors">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-softmatrices-light-gray py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="flex flex-col md:flex-row items-center space-y-2 md:space-y-0 md:space-x-6">
+                    <a href="#" class="text-softmatrices-dark hover:text-softmatrices-blue">Privacy Policy</a>
+                    <a href="#" class="text-softmatrices-dark hover:text-softmatrices-blue">Terms of Service</a>
+                </div>
+                <div class="mt-4 md:mt-0 text-center md:text-right">
+                    <p class="text-softmatrices-dark">© 2024 Softmatrices. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
