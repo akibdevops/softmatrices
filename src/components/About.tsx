@@ -1,30 +1,11 @@
-import { useEffect, useState } from 'react';
 import { Users, Target, Award, Sparkles, ArrowRight, CheckCircle } from 'lucide-react';
+import { useInView } from 'react-intersection-observer';
 
 const About = () => {
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-        }
-      },
-      { threshold: 0.1 }
-    );
-
-    const element = document.getElementById('about');
-    if (element) {
-      observer.observe(element);
-    }
-
-    return () => {
-      if (element) {
-        observer.unobserve(element);
-      }
-    };
-  }, []);
+  const { ref, inView: isVisible } = useInView({
+    threshold: 0.1,
+    triggerOnce: true
+  });
 
   const values = [
     {
@@ -59,7 +40,7 @@ const About = () => {
   };
 
   return (
-    <section id="about" className="section-padding bg-gradient-to-b from-neutral-50 to-white">
+    <section ref={ref} id="about" className="section-padding bg-gradient-to-b from-neutral-50 to-white">
       <div className="container-custom">
         <div className={`text-center mb-16 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <div className="inline-flex items-center space-x-2 glass-card rounded-full px-4 py-2 mb-6">

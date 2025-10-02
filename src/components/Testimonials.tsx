@@ -1,31 +1,13 @@
 import { useEffect, useState } from 'react';
 import { Star, Quote, Sparkles } from 'lucide-react';
+import { useInView } from 'react-intersection-observer';
 
 const Testimonials = () => {
-  const [isVisible, setIsVisible] = useState(false);
+  const { ref, inView: isVisible } = useInView({
+    threshold: 0.1,
+    triggerOnce: true
+  });
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-        }
-      },
-      { threshold: 0.1 }
-    );
-
-    const element = document.getElementById('testimonials');
-    if (element) {
-      observer.observe(element);
-    }
-
-    return () => {
-      if (element) {
-        observer.unobserve(element);
-      }
-    };
-  }, []);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -82,7 +64,7 @@ const Testimonials = () => {
   };
 
   return (
-    <section id="testimonials" className="section-padding bg-gradient-to-b from-white to-neutral-50">
+    <section ref={ref} id="testimonials" className="section-padding bg-gradient-to-b from-white to-neutral-50">
       <div className="container-custom">
         <div className={`text-center mb-16 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <div className="inline-flex items-center space-x-2 glass-card rounded-full px-4 py-2 mb-6">
