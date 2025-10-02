@@ -59,7 +59,7 @@ const About = () => {
         </div>
 
         {/* Main Content */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-20">
+        <div className="grid grid-cols-1 px-10 lg:grid-cols-2 gap-16 items-center mb-20">
           {/* Left Content */}
           <div className={`transition-all duration-1000 delay-200 ${
             isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'

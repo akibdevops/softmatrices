@@ -75,7 +75,7 @@ const Contact = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+        <div className="grid grid-cols-1 px-10 lg:grid-cols-2 gap-16">
           {/* Contact Information */}
           <div className="space-y-8">
             <div>
@@ -110,7 +110,7 @@ const Contact = () => {
             </div>
 
             {/* Social Links */}
-            <div className="pt-8">
+            {/* <div className="pt-8">
               <h4 className="font-semibold text-neutral-900 mb-4">Follow Us</h4>
               <div className="flex space-x-4">
                 {['Twitter', 'LinkedIn', 'Facebook'].map((social) => (
@@ -122,11 +122,11 @@ const Contact = () => {
                   </button>
                 ))}
               </div>
-            </div>
+            </div> */}
           </div>
 
           {/* Contact Form */}
-          <div className="glass-card rounded-2xl p-8">
+          <div className="glass-card rounded-2xl">
             <h3 className="text-2xl font-bold text-neutral-900 mb-6">
               Send us a Message
             </h3>
@@ -196,7 +196,7 @@ const Contact = () => {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full btn-primary flex items-center justify-center space-x-2 disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="w-full btn-primary flex items-center justify-center space-x-2 py-5 disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   {isSubmitting ? (
                     <>

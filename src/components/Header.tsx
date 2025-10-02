@@ -45,7 +45,7 @@ const Header = () => {
       }`}
     >
       <div className="container-custom">
-        <div className="flex items-center justify-between h-16 lg:h-20">
+        <div className="flex items-center justify-between px-5 h-16 lg:h-20">
           {/* Logo */}
           <motion.div 
             className="flex items-center space-x-3"
